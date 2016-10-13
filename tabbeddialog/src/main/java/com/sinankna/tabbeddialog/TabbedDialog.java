@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.sinankna.tabbeddialog.utils.CustomViewPager;
 import com.sinankna.tabbeddialog.utils.TabbedDialogTemplate;
 import com.sinankna.tabbeddialog.utils.TabbedDialogsAdapter;
 
@@ -24,7 +25,7 @@ public class TabbedDialog extends DialogFragment {
     private ArrayList<TabbedDialogTemplate> mFragmentsList = new ArrayList<TabbedDialogTemplate>();
 
     private TabLayout mTabLayout;
-    private ViewPager mViewPager;
+    private CustomViewPager mViewPager;
     private TabbedDialogsAdapter mAdapter;
 
     @Nullable
@@ -34,7 +35,7 @@ public class TabbedDialog extends DialogFragment {
         View view = inflater.inflate(R.layout.dialog_main,null);
 
         mTabLayout = (TabLayout) view.findViewById(R.id.main_tablayout);
-        mViewPager = (ViewPager) view.findViewById(R.id.main_viewpager);
+        mViewPager = (CustomViewPager) view.findViewById(R.id.main_viewpager);
         mAdapter = new TabbedDialogsAdapter(getChildFragmentManager(), mFragmentsList);
 
         for(int i=0;i<mFragmentsList.size();i++) {
