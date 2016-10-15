@@ -12,6 +12,6 @@ allprojects {
 ```
 2) Add the following your app <b>build.gradle</b>
 ```
-compile 'com.github.sinankna:TabbedDialog:v1.0'
+compile 'com.github.sinankna:TabbedDialog:v1.1'
 ```
 soon...
